@@ -1,0 +1,20 @@
+<h2 style="color:crimson;">PRODUCTOS CARGADOS</h2>
+
+<% if(products.length > 0){ %>
+    <div class="table-responsive">
+        <table class="table table-dark">
+            <tr style="color: yellow;"> <th>TITLE</th> <th>PRICE</th> <th>DESC</th> </tr>
+            <% for (const product of products) {%>
+            <tr>
+                <td><%=product.title%></td>
+                <td> $ <%=product.price%></td>
+                <td><%=product.desc%></td>
+            </tr>
+            <%};%>
+        </table>
+    </div>
+<% } else{ %>
+    <h3 class="alert alert-danger">No hay productos cargados</h1>
+<% } %>
+
+<a href="/"> <button class="btn btn-danger"> UPLOAD PRODUCT </button> </a>
